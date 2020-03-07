@@ -12,11 +12,26 @@ namespace HtmlGeneratorTest
         {
             Renderer = new CommentsRenderer();
         }
-        
+
         [Test]
-        public void Test1()
+        public void ReturnsEmpty()
         {
+            Renderer.AuthorNames = new string [] {};
             Assert.AreEqual("", Renderer.GetHtml());
+        }
+
+        [Test]
+        public void ReturnName1()
+        {
+            Renderer.AuthorNames = new string [] {"Randy"};
+            Assert.AreEqual("Randy", Renderer.GetHtml());
+        }
+
+        [Test]
+        public void ReturnName2()
+        {
+            Renderer.AuthorNames = new string [] {"Randy", "Bruce"};
+            Assert.AreEqual("Randy, Bruce", Renderer.GetHtml());
         }
     }
 }
