@@ -16,21 +16,20 @@ namespace HtmlGeneratorTest
         [Test]
         public void ReturnsEmpty()
         {
-            Renderer.AuthorNames = new string [] {};
             Assert.AreEqual("", Renderer.GetHtml());
         }
 
         [Test]
         public void ReturnName1()
         {
-            Renderer.AuthorNames = new string [] {"Randy"};
+            Renderer.Comments = new[] { new Comment("Randy") };
             Assert.AreEqual("<strong>Randy</strong>", Renderer.GetHtml());
         }
 
         [Test]
         public void ReturnName2()
         {
-            Renderer.AuthorNames = new string [] {"Randy", "Bruce"};
+            Renderer.Comments = new [] { new Comment("Randy"), new Comment("Bruce") };
             Assert.AreEqual("<strong>Randy</strong><br><strong>Bruce</strong>", Renderer.GetHtml());
         }
     }
