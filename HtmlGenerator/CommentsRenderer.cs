@@ -14,11 +14,11 @@ namespace HtmlGenerator
                 var needsComma = i > 0;
                 if (needsComma)
                 {
-                    html = html + ", " + AuthorNames[i];
+                    html = html + "<br>" + "<strong>" + AuthorNames[i] + "</strong>";
                 }
                 else
                 {
-                    html += AuthorNames[i];
+                    html += "<strong>" + AuthorNames[i] + "</strong>";
                 }
             }
             return html;

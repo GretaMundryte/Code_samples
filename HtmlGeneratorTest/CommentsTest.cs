@@ -24,14 +24,14 @@ namespace HtmlGeneratorTest
         public void ReturnName1()
         {
             Renderer.AuthorNames = new string [] {"Randy"};
-            Assert.AreEqual("Randy", Renderer.GetHtml());
+            Assert.AreEqual("<strong>Randy</strong>", Renderer.GetHtml());
         }
 
         [Test]
         public void ReturnName2()
         {
             Renderer.AuthorNames = new string [] {"Randy", "Bruce"};
-            Assert.AreEqual("Randy, Bruce", Renderer.GetHtml());
+            Assert.AreEqual("<strong>Randy</strong><br><strong>Bruce</strong>", Renderer.GetHtml());
         }
     }
 }
