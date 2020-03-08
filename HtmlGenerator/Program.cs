@@ -8,8 +8,12 @@ namespace HtmlGenerator
         public static void Main(string[] args)
         {
             var renderer = new CommentsRenderer();
-            renderer.Comments = new[] {new Comment("Randy"), new Comment("Brown"),};
-            using (var writer = File.CreateText("C:\\Users\\greta\\Downloads\\Test.html"))
+            renderer.Comments = new[]
+            {
+                new Comment("Randy", "Great work"), 
+                new Comment("Brown", "Keep it up"),
+            };
+            using (var writer = File.CreateText("./Test.html"))
             {
                 writer.WriteLine(renderer.GetHtml());
             }

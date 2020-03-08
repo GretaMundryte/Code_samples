@@ -14,12 +14,9 @@ namespace HtmlGenerator
                 var needsComma = i > 0;
                 if (needsComma)
                 {
-                    html = html + "<br>" + "<strong>" + Comments[i].AuthorName + "</strong>";
+                    html = html + "<br>";
                 }
-                else
-                {
-                    html += "<strong>" + Comments[i].AuthorName + "</strong>";
-                }
+                html += "<strong>" + Comments[i].AuthorName + "</strong><p>" + Comments[i].Text + "</p>";
             }
             return html;
         }
@@ -28,10 +25,12 @@ namespace HtmlGenerator
     public class Comment
     {
         public string AuthorName;
+        public string Text;
 
-        public Comment(string name)
+        public Comment(string name, string text)
         {
             AuthorName = name;
+            Text = text;
         }
     }
 }

@@ -18,19 +18,12 @@ namespace HtmlGeneratorTest
         {
             Assert.AreEqual("", Renderer.GetHtml());
         }
-
-        [Test]
-        public void ReturnName1()
-        {
-            Renderer.Comments = new[] { new Comment("Randy") };
-            Assert.AreEqual("<strong>Randy</strong>", Renderer.GetHtml());
-        }
-
+        
         [Test]
         public void ReturnName2()
         {
-            Renderer.Comments = new [] { new Comment("Randy"), new Comment("Bruce") };
-            Assert.AreEqual("<strong>Randy</strong><br><strong>Bruce</strong>", Renderer.GetHtml());
+            Renderer.Comments = new [] { new Comment("Randy", "You did it"), new Comment("Bruce", "Nice code") };
+            Assert.AreEqual("<strong>Randy</strong><p>You did it</p><br><strong>Bruce</strong><p>Nice code</p>", Renderer.GetHtml());
         }
     }
 }
