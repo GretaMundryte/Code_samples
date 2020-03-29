@@ -13,10 +13,8 @@ namespace HtmlGenerator
                 new Comment("Randy", "Great work"), 
                 new Comment("Brown", "Keep it up"),
             };
-            using (var writer = File.CreateText("./Test.html"))
-            {
-                writer.WriteLine(renderer.GetHtml());
-            }
+            using var writer = File.CreateText("./test.html");
+            writer.WriteLine(renderer.GetHtml());
         }
     }
 }

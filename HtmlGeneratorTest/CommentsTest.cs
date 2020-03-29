@@ -20,7 +20,7 @@ namespace HtmlGeneratorTest
         }
         
         [Test]
-        public void ReturnName2()
+        public void RendersTwoComments()
         {
             Renderer.Comments = new [] { new Comment("Randy", "You did it"), new Comment("Bruce", "Nice code") };
             Assert.AreEqual("<strong>Randy</strong><p>You did it</p><br><strong>Bruce</strong><p>Nice code</p>", Renderer.GetHtml());

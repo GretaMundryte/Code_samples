@@ -1,0 +1,30 @@
+﻿body {
+    font-family: arial, serif;
+}
+
+h1 {
+    color: purple;
+    font-size: 40px;
+    margin: 0px;
+    background-color: lightsteelblue;
+    text-align: center;
+}
+.index-intro h3 {
+    text-align: center;
+    font-weight: 700;
+}
+#tittle {
+    color: #000;
+    background-color: #fff;
+    text-align: left;
+    font-size: 20px;
+}
+h4 {
+    color: #00008b;
+    background-color: rgb(200, 200, 350);
+    text-align: right;
+    font-style: italic;
+}
+a {
+    text-decoration: none;
+}
