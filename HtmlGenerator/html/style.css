@@ -1,11 +1,17 @@
-﻿body {
-    font-family: arial, serif;
+﻿@font-face {
+    src: url(fonts/Quicksand-VariableFont_wght.ttf);
+    font-family: Quicksand;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    text-indent: 30px;
+    line-height: 26px;
 }
 
 h1 {
-    color: purple;
-    font-size: 40px;
-    margin: 0px;
+    color: rgb(152, 26, 255);
+    font-size: 33px;
+    margin: 5px;
     background-color: lightsteelblue;
     text-align: center;
 }
@@ -23,8 +29,11 @@ h4 {
     color: #00008b;
     background-color: rgb(200, 200, 350);
     text-align: right;
-    font-style: italic;
 }
 a {
-    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+}
+#signature {
+    text-transform: uppercase;
+    font-style: italic;
 }
